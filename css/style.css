@@ -12,7 +12,6 @@ Default: 400
 Default: 1
 
 
-
 --- Colors
 - Primary: #e67e22
 
@@ -38,6 +37,11 @@ Default: 1
 
 */
 
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -49,4 +53,15 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  width: 100%;
 }
