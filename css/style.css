@@ -68,6 +68,30 @@ body {
 /*******************************************/
 /* General Resusable Components */
 /*******************************************/
+
+.container {
+  max-width: 11.4rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -172,6 +196,7 @@ body {
 
 /*******************************************/
 /* Hero Section */
+/* Note: We are not using reusable container and grid for hero to have the hero wider than other sections. But we can use it if we prefer to. */
 /*******************************************/
 
 .section-hero {
