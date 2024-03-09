@@ -9,6 +9,7 @@
 const hamMenu = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
 const allLinks = document.querySelectorAll("a:link");
+const sectionHeroEl = document.querySelector(".section-hero");
 
 hamMenu.addEventListener("click", () => {
   header.classList.toggle("nav-open");
@@ -40,3 +41,23 @@ allLinks.forEach((link) => {
     }
   });
 });
+
+// Sticky Navigation
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-100px",
+  }
+);
+observer.observe(sectionHeroEl);
