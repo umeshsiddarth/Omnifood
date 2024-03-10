@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omnifood is an AI powered food subscription that will make you eat healthy again, 365 days per year. It is tailored to your personal tastes and nutritional needs."
+    />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Omnifood</title>
+    <title>Omnifood | Never Cook Again</title>
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"
@@ -67,11 +76,15 @@
             </div>
           </div>
           <div class="hero-image-box">
-            <img
-              src="img/hero.png"
-              alt="Woman enjoying food, meals in a storage container, and food bowls on a table"
-              class="hero-img"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+              <img
+                src="img/hero-min.png"
+                alt="Woman enjoying food, meals in a storage container, and food bowls on a table"
+                class="hero-img"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -548,13 +561,14 @@
                 first meal is on us!
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" name="sign-up" netlify>
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
                     id="full-name"
                     type="text"
                     placeholder="John Smith"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -565,13 +579,14 @@
                     id="email"
                     type="email"
                     placeholder="me@example.com"
+                    name="email"
                     required
                   />
                 </div>
 
                 <div>
                   <label for="select-where">Where did you hear about us?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="source" required>
                     <option value="">Please choose one option</option>
                     <option value="friends">Friends and Family</option>
                     <option value="youtube">Youtube Video</option>

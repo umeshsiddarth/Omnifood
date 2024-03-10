@@ -253,7 +253,7 @@ body {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.5rem rgba(230, 125, 34, 0.5);
+  box-shadow: 0 0 0 0.3rem rgba(230, 125, 34, 0.5);
 }
 
 /* Helper Classes */
@@ -828,7 +828,7 @@ strong {
 }
 
 .cta *:focus {
-  box-shadow: 0 0 0 5px rgba(253, 242, 233, 0.5);
+  box-shadow: 0 0 0 3px rgba(253, 242, 233, 0.5);
 }
 
 /*******************************************/
